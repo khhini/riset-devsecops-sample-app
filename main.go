@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/khhini/riset-devsecops-sample-app/configs"
 	"github.com/khhini/riset-devsecops-sample-app/modules/hello"
 )
 
@@ -15,6 +16,9 @@ func SetupRouter() *gin.Engine {
 }
 
 func main() {
+	cfg := configs.DefaultListenConfig()
+	cfg.LoadFromEnv()
+
 	router := SetupRouter()
-	router.Run()
+	router.Run(cfg.Addr())
 }
