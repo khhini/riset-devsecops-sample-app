@@ -7,4 +7,4 @@ services:
       dockerfile: deployments/docker/Dockerfile
     container_name: sample-app
     ports:
-      - 9000:8080
+      - 8080:8080
