@@ -1,7 +1,7 @@
 steps:
 - name: golang:1.21
   id: Test
-  endpoint: /bin/bash
+  entrypoint: /bin/bash
   args:
   - "-c"
   - |
