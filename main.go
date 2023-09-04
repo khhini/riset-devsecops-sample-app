@@ -8,10 +8,8 @@ import (
 func SetupRouter() *gin.Engine {
 	router := gin.Default()
 	root := router.Group("")
-	api := router.Group("api")
 
 	hello.NewHelloHandler(root)
-	apigateway.NewApiHandler(api)
 
 	return router
 }
